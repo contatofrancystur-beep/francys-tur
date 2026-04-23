@@ -3491,7 +3491,7 @@ passeios: [
       </div>
     `,
     notas: "Recomendado para escolas, famílias com crianças acima de 6 anos e amantes da ciência. Perfeito para dias de chuva!"
-  }
+  },
   {
     id: 63,
     nome: "Ingresso Exceed Park",
