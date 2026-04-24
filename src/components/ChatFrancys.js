@@ -1,7 +1,55 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const WHATSAPP_NUMBER = "5554981279781";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+
+// ─────────────────────────────────────────────
+// RASTREAMENTO DE GCLID
+// Captura o GCLID da URL quando o cliente chega
+// e salva no localStorage para persistir durante
+// a navegação. Injeta no link do WhatsApp.
+// ─────────────────────────────────────────────
+function captureGclid() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const gclid = params.get('gclid');
+    if (gclid) {
+      localStorage.setItem('gclid', gclid);
+      localStorage.setItem('gclid_time', Date.now().toString());
+    }
+  } catch (e) {}
+}
+
+function getStoredGclid() {
+  try {
+    const gclid = localStorage.getItem('gclid');
+    const gclidTime = localStorage.getItem('gclid_time');
+    if (!gclid || !gclidTime) return null;
+    // GCLID expira em 90 dias (padrão Google)
+    const ninetyDays = 90 * 24 * 60 * 60 * 1000;
+    if (Date.now() - parseInt(gclidTime) > ninetyDays) {
+      localStorage.removeItem('gclid');
+      localStorage.removeItem('gclid_time');
+      return null;
+    }
+    return gclid;
+  } catch (e) {
+    return null;
+  }
+}
+
+function buildWhatsAppLink(message = '') {
+  const gclid = getStoredGclid();
+  const base = `https://wa.me/${WHATSAPP_NUMBER}`;
+  
+  // Monta a mensagem com GCLID embutido (invisível para o cliente)
+  let text = message || 'Olá! Tenho interesse nos passeios da FrancysTur.';
+  if (gclid) {
+    text += ` [ref:${gclid}]`;
+  }
+  
+  return `${base}?text=${encodeURIComponent(text)}`;
+}
+// ─────────────────────────────────────────────
 
 const SYSTEM_PROMPT = `Você é Francys, assistente virtual da FrancysTur — agência de turismo com 13 anos de experiência em Gramado, Canela e Serra Gaúcha.
 
@@ -42,6 +90,11 @@ export default function ChatFrancys() {
   const messagesEndRef = useRef(null);
   const notificationShown = useRef(false);
 
+  // Captura GCLID assim que o componente monta
+  useEffect(() => {
+    captureGclid();
+  }, []);
+
   // Notificação proativa após 6 segundos
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -67,10 +120,10 @@ export default function ChatFrancys() {
   const formatMessage = (text) => {
     text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     text = text.replace(/\n/g, '<br/>');
-    // Transforma links WhatsApp em botão verde
+    // Transforma links WhatsApp em botão verde com GCLID
     text = text.replace(
       /\[([^\]]+)\]\(https:\/\/wa\.me\/[^)]+\)/g,
-      `<a href="${WHATSAPP_LINK}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;background:#25D366;color:white;padding:8px 14px;border-radius:20px;font-size:0.78rem;font-weight:600;text-decoration:none;width:100%;text-align:center;box-sizing:border-box;">💬 $1</a>`
+      `<a href="${buildWhatsAppLink()}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;background:#25D366;color:white;padding:8px 14px;border-radius:20px;font-size:0.78rem;font-weight:600;text-decoration:none;width:100%;text-align:center;box-sizing:border-box;">💬 $1</a>`
     );
     return text;
   };
@@ -90,7 +143,7 @@ export default function ChatFrancys() {
         .filter((m, idx) => !(m.role === 'bot' && idx === 0))
         .map(m => ({
           role: m.role === 'bot' ? 'assistant' : 'user',
-          content: m.content.replace(/<[^>]+>/g, '') // remove HTML para a API
+          content: m.content.replace(/<[^>]+>/g, '')
         }));
 
       const response = await fetch("https://api.anthropic.com/v1/messages", {
@@ -107,18 +160,18 @@ export default function ChatFrancys() {
       const data = await response.json();
       const botText = data.content?.[0]?.text || 'Desculpe, tente novamente em instantes.';
 
-      // Detecta interesse e adiciona botão WhatsApp automaticamente
       const temInteresse = /reserv|valor|preço|quero|comprar|agendar|data|disponível|quanto|pacote|ingresso|passeio|transfer|jantar/i.test(text);
       let finalContent = botText;
       if (temInteresse && !botText.includes('wa.me')) {
-        finalContent += `\n\n[Falar com atendente agora](${WHATSAPP_LINK})`;
+        finalContent += `\n\n[Falar com atendente agora](${buildWhatsAppLink(text)})`;
       }
 
       setMessages(prev => [...prev, { role: 'bot', content: finalContent }]);
     } catch (err) {
+      const wppLink = buildWhatsAppLink();
       setMessages(prev => [...prev, {
         role: 'bot',
-        content: `Tive um probleminha técnico 😅<br/>Mas posso te atender direto no WhatsApp!<br/><a href="${WHATSAPP_LINK}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;background:#25D366;color:white;padding:8px 14px;border-radius:20px;font-size:0.78rem;font-weight:600;text-decoration:none;width:100%;text-align:center;box-sizing:border-box;">💬 Falar no WhatsApp</a>`
+        content: `Tive um probleminha técnico 😅<br/>Mas posso te atender direto no WhatsApp!<br/><a href="${wppLink}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;background:#25D366;color:white;padding:8px 14px;border-radius:20px;font-size:0.78rem;font-weight:600;text-decoration:none;width:100%;text-align:center;box-sizing:border-box;">💬 Falar no WhatsApp</a>`
       }]);
     } finally {
       setLoading(false);
@@ -134,9 +187,9 @@ export default function ChatFrancys() {
 
   return (
     <>
-      {/* Botão WhatsApp flutuante */}
+      {/* Botão WhatsApp flutuante — agora com GCLID */}
       <a
-        href={WHATSAPP_LINK}
+        href={buildWhatsAppLink()}
         target="_blank"
         rel="noopener noreferrer"
         style={styles.wppFloat}
@@ -147,7 +200,7 @@ export default function ChatFrancys() {
         </svg>
       </a>
 
-      {/* Wrapper do chat (acima do botão WhatsApp) */}
+      {/* Wrapper do chat */}
       <div style={styles.chatWrapper}>
 
         {/* Notificação proativa */}
@@ -236,7 +289,6 @@ export default function ChatFrancys() {
   );
 }
 
-// Estilos inline para não depender do CSS existente
 const styles = {
   wppFloat: {
     position: 'fixed',
