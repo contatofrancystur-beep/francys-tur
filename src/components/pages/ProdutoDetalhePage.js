@@ -324,6 +324,8 @@ const ProdutoDetalhePage = () => {
       alert(validacao.mensagem);
       return;
     }
+
+    const gclid = localStorage.getItem('gclid') || '';
     
     const diaDaSemana = getNomeDiaSemana(dataSelecionada);
     const dataObj = new Date(dataSelecionada + 'T00:00:00');
@@ -349,6 +351,10 @@ const ProdutoDetalhePage = () => {
     }
     
     mensagem += `Poderia me fornecer mais informações sobre preços e disponibilidade?`;
+
+    if (gclid) {
+      mensagem += `\n[ref:${gclid}]`;
+    }
     
     const numeroWhatsApp = "5554996623736";
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
