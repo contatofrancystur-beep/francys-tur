@@ -239,7 +239,12 @@ const ProdutoDetalhePage = () => {
         disponivel = false;
       } else if (incluiMariaFumaca()) {
         const diaDaSemana = data.getDay();
-        disponivel = diaDaSemana === 0 || diaDaSemana === 3 || diaDaSemana === 5 || diaDaSemana === 6;
+        // Novembro (10), Dezembro (11) e Janeiro (0): todos exceto Segunda (1)
+        if (mes === 10 || mes === 11 || mes === 0) {
+          disponivel = diaDaSemana !== 1;
+        } else {
+          disponivel = diaDaSemana === 0 || diaDaSemana === 3 || diaDaSemana === 5 || diaDaSemana === 6;
+        }
       }
       
       dias.push({
