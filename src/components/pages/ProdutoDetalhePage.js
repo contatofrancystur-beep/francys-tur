@@ -753,6 +753,7 @@ const ProdutoDetalhePage = () => {
                       </div>
                     </div>
                     
+                    {produto?.id !== 4 && (
                     <div className="quantity-group">
                       <div className="quantity-group-label">
                         <FontAwesomeIcon icon={faUserTie} />
@@ -779,7 +780,9 @@ const ProdutoDetalhePage = () => {
                           +
                         </button>
                       </div>
+                    
                     </div>
+                    )}</div>
                     
                     <div className="quantity-group">
                       <div className="quantity-group-label">
