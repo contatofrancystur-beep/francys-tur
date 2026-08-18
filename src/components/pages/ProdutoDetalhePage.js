@@ -334,12 +334,12 @@ const ProdutoDetalhePage = () => {
     let mensagem = `Olá! Tenho interesse no produto:\n*${produto.nome}*\n\n`;
     
     mensagem += `• Adultos: ${quantidadeAdultos}\n`;
-    mensagem += `• Idosos (60+ anos): ${quantidadeIdosos}\n`;
+    if (produto?.id !== 4) mensagem += `• Idosos (60+ anos): ${quantidadeIdosos}\n`;
     mensagem += `• Crianças (${faixaEtaria.criancaMin}-${faixaEtaria.criancaMax} anos): ${quantidadeCriancas}\n`;
     mensagem += `• Cortesias (0-${faixaEtaria.cortesiaMax} anos): ${quantidadeCortesias}\n`;
     mensagem += `• Data: ${dataSelecionada} (${diaDaSemana} - ${mes})\n\n`;
     
-    const totalPessoas = quantidadeAdultos + quantidadeIdosos + quantidadeCriancas + quantidadeCortesias;
+    const totalPessoas = quantidadeAdultos + (produto?.id !== 4 ? quantidadeIdosos : 0) + quantidadeCriancas + quantidadeCortesias;
     mensagem += `*TOTAL DE PESSOAS:* ${totalPessoas}\n\n`;
     
     if (produto.notas) {
