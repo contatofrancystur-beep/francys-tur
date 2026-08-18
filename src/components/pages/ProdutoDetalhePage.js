@@ -96,7 +96,15 @@ const ProdutoDetalhePage = () => {
     
     const data = new Date(dataString + 'T00:00:00');
     const diaDaSemana = data.getDay();
+    const mes = data.getMonth(); // 0=Jan, 10=Nov, 11=Dez
+    const ano = data.getFullYear();
     
+    // Novembro, Dezembro e Janeiro: todos os dias exceto Segunda (1)
+    if ((mes === 10) || (mes === 11) || (mes === 0)) {
+      return diaDaSemana !== 1;
+    }
+    
+    // Demais meses: apenas Quarta, Sexta, Sábado e Domingo
     return diaDaSemana === 0 || diaDaSemana === 3 || diaDaSemana === 5 || diaDaSemana === 6;
   };
 
