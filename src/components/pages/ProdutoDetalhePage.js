@@ -356,7 +356,7 @@ const ProdutoDetalhePage = () => {
       mensagem += `\n[ref:${gclid}]`;
     }
     
-    const numeroWhatsApp = "5554996623736";
+    const numeroWhatsApp = "5554981279781";
     const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, '_blank');
   };
