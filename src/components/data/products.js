@@ -292,86 +292,15 @@ passeios: [
     descricao: "Uma viagem no tempo a bordo do histórico Trem Maria Fumaça, seguida por uma experiência sensorial no Vale dos Vinhedos! Combine a nostalgia das locomotivas a vapor com a sofisticação dos vinhos premiados da região. Uma jornada única pela história e cultura gaúcha.",
     roteiro: `
      <div class="section-content">
-<h4>Roteiro Completo Trem + Vinícolas</h4>
 <ul>
-  <li><strong>06:00</strong> - Saída de Gramado (ponto central)</li>
-  <li><strong>06:30</strong> - Embarque em Canela (ponto de encontro)</li>
-  <li><strong>08:30</strong> - Chegada em Bento Gonçalves</li>
-  <li><strong>09:00</strong> - Embarque no Trem Maria Fumaça (trajeto de 1h30)</li>
-  <li><strong>10:30</strong> - Chegada em Carlos Barbosa e traslado para vinícola</li>
-  <li><strong>11:00</strong> - Vinícola Aurora - tour e degustação padrão</li>
-  <li><strong>12:30</strong> - Almoço em restaurante típico italiano (incluído)</li>
-  <li><strong>14:00</strong> - Teatro Epopéia Italiana (espetáculo de 50 minutos)</li>
-  <li><strong>15:30</strong> - Queijaria Fetina Valbrenta - degustação de queijos e salames</li>
-  <li><strong>16:30</strong> - Showroom Tramontina (visita e tempo para compras)</li>
-  <li><strong>17:30</strong> - Início do retorno para Gramado</li>
-  <li><strong>19:30</strong> - Chegada prevista em Gramado (20:00 em Canela)</li>
+  <li>🎂 <strong>Trem Maria Fumaça – Trajeto Bento, Garibaldi e Carlos Barbosa</strong><br/>Show a bordo com músicas típicas, apresentações artísticas e degustação padrão de vinho, suco de uva e espumante (conforme regras da operadora).</li>
+  <li>🎭 <strong>Teatro Epopéia Italiana</strong><br/>Espetáculo com 9 cenários contando a história dos imigrantes italianos. Ingresso incluso.</li>
+  <li>🍇 <strong>Vinícola Aurora – Bento Gonçalves</strong><br/>Visitação e degustação padrão da vinícola (conforme disponibilidade). Incluso.</li>
+  <li>🥘 <strong>Almoço incluso</strong><br/>Restaurante Cantina italiana. Bebidas não inclusas.</li>
+  <li>🧵 <strong>Malharia Local</strong><br/>Parada rápida e opcional para compras direto de fábrica. (Sem custo, sem ingresso.)</li>
+  <li>🛠 <strong>Showroom Tramontina – Carlos Barbosa</strong><br/>Visita ao showroom oficial com mais de 5 mil itens em exposição. (Não é visita à fábrica e sem custo)</li>
+  <li>🧀 <strong>Queijaria Fetina Valbrenta</strong><br/>Degustação padrão de queijos, salames e vinhos coloniais (conforme disponibilidade).</li>
 </ul>
-
-<div class="attractions-details">
-  <h5>🎂 Trem Maria Fumaça – Trajeto-Bento, Garibaldi e Carlos Barbosa</h5>
-  <p>Show a bordo com músicas típicas, apresentações artísticas e degustação padrão de vinho, suco de uva e espumante (conforme regras da operadora).</p>
-  
-  <h5>🎭 Teatro Epopéia Italiana</h5>
-  <p>Espetáculo com 9 cenários contando a história dos imigrantes italianos. Ingresso incluso.</p>
-  
-  <h5>🍇 Vinícola Aurora – Bento Gonçalves</h5>
-  <p>Visitação e degustação padrão da vinícola (conforme disponibilidade). Incluso.</p>
-  
-  <h5>🥘 Almoço incluso</h5>
-  <p>Restaurante Cantina italiana. Bebidas não inclusas.</p>
-  
-  <h5>🧵 Malharia Local</h5>
-  <p>Parada rápida e opcional para compras direto de fábrica. (Sem custo, sem ingresso.)</p>
-  
-  <h5>🛠 Showroom Tramontina – Carlos Barbosa</h5>
-  <p>Visita ao showroom oficial com mais de 5 mil itens em exposição. (Não é visita à fábrica e sem custo)</p>
-  
-  <h5>🧀 Queijaria Fetina Valbrenta</h5>
-  <p>Degustação padrão de queijos, salames e vinhos coloniais (conforme disponibilidade).</p>
-</div>
-
-<div class="inclusions">
-  <h5>✅ INCLUI:</h5>
-  <ul>
-    <li>Transporte da agência ida e volta</li>
-    <li>Transporte entre todas as cidades visitadas</li>
-    <li>Bilhete do Trem Maria Fumaça</li>
-    <li>Ingresso da Epopeia Italiana</li>
-    <li>Almoço</li>
-    <li>Todas as degustações padrão nos locais mencionados</li>
-  </ul>
-  
-  <h5>❌ NÃO INCLUI:</h5>
-  <ul>
-    <li>Bebidas durante o almoço</li>
-    <li>Compras pessoais nas lojas visitadas</li>
-  </ul>
-</div>
-
-<div class="schedule-info">
-  <h5>🕒 HORÁRIOS PREVISTOS</h5>
-  <p><strong>Saída de Gramado/Canela:</strong> previsto 06h00</p>
-  <p><strong>Retorno previsto:</strong> entre 19:00 e 20:00</p>
-  <p class="note">(Horário pode variar conforme trânsito, tempo nas atrações e fluxo do dia.)</p>
-</div>
-
-<div class="important-info">
-  <h5>ℹ INFORMAÇÕES IMPORTANTES</h5>
-  <p><strong>Distância:</strong><br>
-  Gramado → Bento Gonçalves: aproximadamente 120 km (1h40 a 2h de viagem).</p>
-  
-  <p><strong>Sobre o Trem Maria Fumaça:</strong><br>
-  O guia não acompanha dentro do trem (regra da operadora), mas aguarda o grupo na estação final. O passeio de trem dura cerca de 1h30.</p>
-  
-  <p><strong>Sobre o Transporte:</strong><br>
-  Todo o deslocamento de Gramado, Bento, Garibaldi e Carlos Barbosa é feito no transporte da agência. As atrações aqui mencionadas também são todas feitas com transporte da agência, podendo ser carro, van, micro-ônibus ou ônibus.</p>
-  
-  <p><strong>Sobre a Ordem das Atrações:</strong><br>
-  A ordem das visitas pode ser alterada pela FrancysTur conforme logística, clima e horários das atrações.</p>
-</div>
-
-<p class="note">*Ordem das atrações pode ser alterada conforme logística do dia.</p>
 </div>
     `,
     pontosVisita: [
