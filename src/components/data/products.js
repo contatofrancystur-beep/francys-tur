@@ -313,11 +313,8 @@ passeios: [
       "Parada em malharia local (opcional)"
     ],
     horarios: [
-      "Saída Gramado: 06:00h",
-      "Saída Canela: 06:30h",
-      "Trem Maria Fumaça: 09:00h (horário fixo)",
-      "Retorno Gramado: 19:30h - 20:00h",
-      "Duração total: 12-14 horas"
+      "Saída padrão: 06:00h",
+      "Retorno previsto: 19:00h (horário pode variar conforme trânsito e temporada)"
     ],
     saidas: [
       "Gramado: 06:00h - Ponto central (informado na confirmação)",
