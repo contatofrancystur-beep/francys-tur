@@ -63,7 +63,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a 
-                href="https://wa.me/5554996623736" 
+                href="https://wa.me/5554981279781" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-icon whatsapp"
