@@ -788,9 +788,8 @@ const ProdutoDetalhePage = () => {
                           +
                         </button>
                       </div>
-                    
                     </div>
-                    )}</div>
+                    )}
                     
                     <div className="quantity-group">
                       <div className="quantity-group-label">
