@@ -43,9 +43,8 @@ passeios: [
       "Centro de artesanato"
     ],
     horarios: [
-      "Manhã: 08:30h (saída)",
-      "Tarde: 17:00h (saída)",
-      "Duração: 9 horas aproximadamente"
+      "Saída padrão: 06:00h",
+      "Retorno previsto: 19:00h (horário pode variar conforme trânsito e temporada)"
     ],
     saidas: [
       "Ponto principal: Rua Madre Verônica, 50 - Centro, Gramado",
