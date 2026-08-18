@@ -860,10 +860,12 @@ const ProdutoDetalhePage = () => {
                       <span>Adultos:</span>
                       <span className="summary-value">{quantidadeAdultos}</span>
                     </div>
+{produto?.id !== 4 && (
                     <div className="summary-line">
                       <span>Idosos (60+):</span>
                       <span className="summary-value">{quantidadeIdosos}</span>
                     </div>
+                    )}
                     <div className="summary-line">
                       <span>Crianças ({faixaEtaria.criancaMin}-{faixaEtaria.criancaMax}):</span>
                       <span className="summary-value">{quantidadeCriancas}</span>
