@@ -18,21 +18,17 @@ passeios: [
     reviews: 156,
     descricao: "Descubra os encantos da Suíça brasileira em um tour completo pela charmosa Gramado! Visite as principais atrações, ruas pitorescas e pontos turísticos mais fotografados. Uma experiência perfeita para quem deseja conhecer a essência desta cidade mágica.",
     roteiro: `
-      <div class="section-content">
-        <h4>Roteiro Detalhado do Tour pela Cidade</h4>
-        <ul>
-          <li>08:30 - Saída do ponto de encontro no centro de Gramado (Rua Madre Verônica, 50)</li>
-          <li>09:00 - Visita ao Lago Negro e Rua Coberta (fotos e história do local)</li>
-          <li>10:00 - Palácio dos Festivais (explicação sobre o Natal Luz) e Igreja Matriz São Pedro</li>
-          <li>11:00 - Rua Torta (famoso ponto fotográfico) e mirantes da cidade</li>
-          <li>12:00 - Almoço em restaurante típico (opcional, não incluso - sugestões do guia)</li>
-          <li>13:30 - Mini Mundo e Mundo a Vapor (visita às áreas externas, fotos)</li>
-          <li>15:00 - Museu do Perfume e visita a fábrica de chocolates com degustação</li>
-          <li>16:00 - Tempo livre para compras no centro (lojas de couro, chocolate, artesanato)</li>
-          <li>17:00 - Retorno aos hotéis ou ponto inicial</li>
-        </ul>
-        <p class="note">*Tempo aproximado em cada atração pode variar conforme trânsito e interesse do grupo.</p>
-      </div>
+     <div class="section-content">
+<ul>
+  <li>🎂 <strong>Trem Maria Fumaça – Trajeto Bento, Garibaldi e Carlos Barbosa</strong><br/>Show a bordo com músicas típicas, apresentações artísticas e degustação padrão de vinho, suco de uva e espumante (conforme regras da operadora).</li>
+  <li>🎭 <strong>Teatro Epopéia Italiana</strong><br/>Espetáculo com 9 cenários contando a história dos imigrantes italianos. Ingresso incluso.</li>
+  <li>🍇 <strong>Vinícola Aurora – Bento Gonçalves</strong><br/>Visitação e degustação padrão da vinícola (conforme disponibilidade). Incluso.</li>
+  <li>🥘 <strong>Almoço incluso</strong><br/>Restaurante Cantina italiana. Bebidas não inclusas.</li>
+  <li>🧵 <strong>Malharia Local</strong><br/>Parada rápida e opcional para compras direto de fábrica. (Sem custo, sem ingresso.)</li>
+  <li>🛠 <strong>Showroom Tramontina – Carlos Barbosa</strong><br/>Visita ao showroom oficial com mais de 5 mil itens em exposição. (Não é visita à fábrica e sem custo)</li>
+  <li>🧀 <strong>Queijaria Fetina Valbrenta</strong><br/>Degustação padrão de queijos, salames e vinhos coloniais (conforme disponibilidade).</li>
+</ul>
+</div>
     `,
     pontosVisita: [
       "Lago Negro",
