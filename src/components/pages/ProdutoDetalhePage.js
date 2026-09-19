@@ -69,7 +69,7 @@ const ProdutoDetalhePage = () => {
     const faixaEtaria = produto.faixaEtaria || '';
     
     if (produto.id === 4) {
-      return { criancaMin: 6, criancaMax: 11, cortesiaMax: 5 };
+      return { criancaMin: 6, criancaMax: 10, cortesiaMax: 5 };
     }
     
     if (produto.id === 6) {
