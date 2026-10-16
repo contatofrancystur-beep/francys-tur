@@ -14,7 +14,7 @@ export async function onRequestPost({ request, env }) {
   try { body = await request.json(); } catch { return new Response('Bad Request', { status: 400 }); }
 
   const payload = {
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-sonnet-5-5',
     max_tokens: Math.min(Number(body.max_tokens) || 1000, 1000),
     system: typeof body.system === 'string' ? body.system.slice(0, 20000) : undefined,
     messages: Array.isArray(body.messages) ? body.messages.slice(-20) : [],
