@@ -1,7 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
+import "./components/utils/gclid";
+import "./theme.css";
 import ChatFrancys from "./components/ChatFrancys";
 import { PesquisaProvider } from "./components/PesquisaContext";
 import { CartProvider } from "./components/CartContext";
@@ -18,10 +20,17 @@ import ProdutoDetalhePage from "./components/pages/ProdutoDetalhePage";
 import CheckoutPage from "./components/pages/CheckoutPage";
 import BuscaPage from "./components/pages/BuscaPage";
 
+function ScrollTopAndGclid() {
+  const { pathname } = useLocation();
+  React.useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
+
 function Layout() {
   return (
     <div className="app-container">
-      <Navbar />
+      <ScrollTopAndGclid />
+      <SiteHeader />
       <main className="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -36,7 +45,7 @@ function Layout() {
           <Route path="/busca" element={<BuscaPage />} />
         </Routes>
       </main>
-      <Footer />
+      <SiteFooter />
       {/* ✅ Chat IA Francys — aparece em todas as páginas */}
       <ChatFrancys />
     </div>
