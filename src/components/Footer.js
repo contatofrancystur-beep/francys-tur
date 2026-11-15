@@ -6,7 +6,7 @@ import {
   faFacebookF,
   faInstagram,
   faWhatsapp,
-  faGoogle,
+  faGoogle,h
   faTwitter
 } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -205,7 +205,7 @@ const Footer = () => {
               © {currentYear} FrancyStur Gramado. Todos os direitos reservados.
             </p>
             <p className="company-info">
-              CNPJ: 00.000.000/0001-00 • Gramado/RS
+              CNPJ: 55.680.192/0001-16 • Gramado/RS
             </p>
           </div>
           <div className="footer-disclaimer">
