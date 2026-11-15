@@ -71,7 +71,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faWhatsapp} />
               </a>
               <a 
-                href="mailto:contato@francystur.com.br"
+                                href="mailto:contatofrancystur@gmail.com"
                 className="social-icon email"
               >
                 <FontAwesomeIcon icon={faEnvelope} />
@@ -130,14 +130,14 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faPhone} className="contact-icon" />
                 <div>
                   <p className="contact-label">Telefone/WhatsApp</p>
-                  <p className="contact-info">(54) 99662-3736</p>
+                            <p className="contact-info">(54) 98127-9781</p>
                 </div>
               </li>
               <li className="contact-item">
                 <FontAwesomeIcon icon={faEnvelope} className="contact-icon" />
                 <div>
                   <p className="contact-label">E-mail</p>
-                  <p className="contact-info">contato@francystur.com.br</p>
+                            <p className="contact-info">contatofrancystur@gmail.com</p>
                 </div>
               </li>
               <li className="contact-item">
