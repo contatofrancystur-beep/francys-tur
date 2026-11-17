@@ -4862,3 +4862,20 @@ img[src*="default-product.jpg"] {
 /* ===== ESTILOS ESPECÍFICOS PARA PÁGINA DE DETALHE (mantém tudo) ===== */
 /* Todos os estilos que você já tem para product-detail-page permanecem */
 /* Eles serão usados apenas quando o usuário clicar no produto */
+
+.footer-seals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.cadastur-seal {
+    display: inline-block;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.cadastur-seal:hover {
+    opacity: 1;
+}
