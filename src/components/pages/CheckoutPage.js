@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faShoppingCart, faTag, faDollarSign } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from '../CartContext';
+import { adicionarRefGclid } from '../utils/gclidWhatsApp';
 
 const CheckoutPage = () => {
   const { produtos, limparCarrinho } = useCart();
@@ -51,7 +52,7 @@ const CheckoutPage = () => {
                      `(A combinar)\n\n` +
                      `_Este pedido foi gerado automaticamente pelo site._`;
     
-    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(adicionarRefGclid(mensagem))}`;
     window.open(url, '_blank');
     
     // Limpar carrinho após alguns segundos (opcional)
