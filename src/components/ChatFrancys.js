@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { obterGclid } from './utils/gclidWhatsApp';
 
 const WHATSAPP_NUMBER = "5554981279781";
 
@@ -38,7 +39,8 @@ function getStoredGclid() {
 }
 
 function buildWhatsAppLink(message = '') {
-  const gclid = getStoredGclid();
+  // Lê da URL e do localStorage na hora: o link pode ser montado antes do useEffect guardar o GCLID
+  const gclid = obterGclid() || getStoredGclid();
   const base = `https://wa.me/${WHATSAPP_NUMBER}`;
   
   // Monta a mensagem com GCLID embutido (invisível para o cliente)
@@ -195,6 +197,7 @@ export default function ChatFrancys() {
       {/* Botão WhatsApp flutuante — agora com GCLID */}
       <a
         href={buildWhatsAppLink()}
+        onClick={(e) => { e.currentTarget.href = buildWhatsAppLink(); }}
         target="_blank"
         rel="noopener noreferrer"
         style={styles.wppFloat}
