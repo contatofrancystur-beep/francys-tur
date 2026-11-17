@@ -1,6 +1,7 @@
 // components/Footer.jsx 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { linkWhatsAppComGclid } from './utils/gclidWhatsApp';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -63,7 +64,8 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a 
-                href="https://wa.me/5554981279781" 
+                href="https://wa.me/5554981279781"
+                onClick={(e) => { e.currentTarget.href = linkWhatsAppComGclid(); }}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-icon whatsapp"
