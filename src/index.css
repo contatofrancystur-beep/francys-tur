@@ -4879,3 +4879,7 @@ img[src*="default-product.jpg"] {
 .cadastur-seal:hover {
     opacity: 1;
 }
+.cadastur-seal svg {
+      width: 240px;
+      height: 84px;
+}
