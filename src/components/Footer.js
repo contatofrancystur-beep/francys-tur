@@ -211,19 +211,26 @@ const Footer = () => {
             </p>
           </div>
 {/* Cadastur */}
-          <div className="footer-seals">
-                        <a href="https://www.cadastur.turismo.gov.br" target="_blank" rel="noopener noreferrer" className="cadastur-seal" title="Cadastur - Turismo Regularizado">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 56" width="160" height="56" aria-label="Cadastur">
-                            <rect width="160" height="56" rx="6" fill="#1351B4"/>
-                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 56" width="240" height="84" aria-label="Cadastur">
-                            <text x="26" y="18" fontFamily="Arial,sans-serif" fontWeight="700" fontSize="11" fill="#ffffff" letterSpacing="1">CADASTUR</text>
-                            <text x="26" y="28" fontFamily="Arial,sans-serif" fontSize="7.5" fill="#FFCD07" letterSpacing="0.3">MINISTERIO DO TURISMO</text>
-                            <line x1="8" y1="33" x2="152" y2="33" stroke="#ffffff" strokeWidth="0.5" strokeOpacity="0.4"/>
-                            <text x="80" y="43" fontFamily="Arial,sans-serif" fontSize="7" fill="#ffffff" textAnchor="middle" opacity="0.9">CNPJ 55.680.192/0001-16 - Valido 15/07/2028</text>
-            </svg>
-            </a>
-            </div>
-                    <div className="footer-disclaimer">
+            <div className="footer-seals">
+                        <a href="https://www.cadastur.turismo.gov.br" target="_blank" rel="noopener noreferrer" className="cadastur-seal" title="Certificado Cadastur - Agência de Turismo Regularizada">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 160" width="280" height="160" aria-label="Cadastur">
+                            <rect width="280" height="160" rx="10" fill="#1565C0"/>
+                            <rect x="1" y="1" width="278" height="158" rx="9" fill="none" stroke="#ffffff" strokeWidth="0.5" strokeOpacity="0.3"/>
+                            <g transform="translate(18, 18)">
+                              <path d="M 8,22 C 8,22 2,14 10,10 C 18,6 24,14 30,14 C 36,14 42,8 48,10 C 54,12 50,22 44,22 C 38,22 32,16 26,16 C 20,16 14,22 8,22 Z" fill="#F9C423" opacity="0.95"/>
+                              <path d="M 8,16 C 8,16 14,10 20,10 C 26,10 32,16 38,16 C 44,16 50,10 56,12 C 62,14 58,24 50,22 C 42,20 36,14 30,14 C 24,14 18,20 12,20 C 6,20 4,16 8,16 Z" fill="#5BB65A" opacity="0.95"/>
+                            </g>
+                            <text x="82" y="40" fontFamily="Arial,sans-serif" fontWeight="900" fontSize="22" fill="#ffffff" letterSpacing="1">Cadastur</text>
+                            <text x="82" y="54" fontFamily="Arial,sans-serif" fontSize="9" fill="#ffffff" opacity="0.85" letterSpacing="0.3">Fazendo o turismo legal.</text>
+                            <line x1="14" y1="72" x2="266" y2="72" stroke="#ffffff" strokeWidth="0.5" strokeOpacity="0.4"/>
+                            <text x="140" y="90" fontFamily="Arial,sans-serif" fontWeight="700" fontSize="11" fill="#ffffff" textAnchor="middle" letterSpacing="0.5">AGÊNCIA DE TURISMO</text>
+                            <text x="140" y="108" fontFamily="Arial,sans-serif" fontSize="9" fill="#ffffff" textAnchor="middle" opacity="0.9">THAIS RAFAELA WIERZYNSKI ARRUE</text>
+                            <text x="140" y="124" fontFamily="Arial,sans-serif" fontSize="9" fill="#F9C423" textAnchor="middle">CNPJ: 55.680.192/0001-16</text>
+                            <text x="140" y="140" fontFamily="Arial,sans-serif" fontSize="8.5" fill="#ffffff" textAnchor="middle" opacity="0.85">Válido: 15/07/2026 a 15/07/2028</text>
+                            <text x="140" y="155" fontFamily="Arial,sans-serif" fontSize="7" fill="#ffffff" textAnchor="middle" opacity="0.6">Ministério do Turismo • Governo Federal</text>
+                          </svg>
+                        </a>
+                      </div>
                         <p>Este site nao e afiliado aos parques e atracoes. Vendemos ingressos como revendedores autorizados.</p>
             </div>
             </div>
